@@ -14,15 +14,19 @@ functions:
       - http:
           path: product
           method: get
+          cors: true
       - http:
           path: product/{id}
           method: get
+          cors: true
       - http:
           path: category/{id}
           method: get
+          cors: true
       - http:
           path: category
           method: get
+          cors: true
 
 plugins:
   - serverless-offline
