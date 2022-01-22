@@ -19,7 +19,12 @@ app.get('/product/', (req, res) => {
 
     const Product = [...results]
     const response = {
+      statusCode: 200,
       data: Product,
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Credentials': true,
+      },
       message: 'All Product successfully retrieved.',
     }
     res.send(response)
@@ -38,7 +43,12 @@ app.get('/product/:id', (req, res) => {
 
     const Product = [...results]
     const response = {
+      statusCode: 200,
       data: Product,
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Credentials': true,
+      },
       message: `Search for retrieved product successfully.`,
     }
     res.status(200).send(response)
@@ -57,7 +67,12 @@ app.get('/category/:id', (req, res) => {
   
       const Category = [...results]
       const response = {
+        statusCode: 200,
         data: Category,
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Credentials': true,
+        },
         message: `Search for retrieved category successfully.`,
       }
       res.status(200).send(response)
@@ -75,7 +90,12 @@ app.get('/category/', (req, res) => {
   
       const Category = [...results]
       const response = {
+        statusCode: 200,
         data: Category,
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Credentials': true,
+        },
         message: `All Category successfully retrieved.`,
       }
       res.status(200).send(response)
