@@ -23,7 +23,7 @@ app.get('/product/', (req, res) => {
       data: Product,
       headers: {
         'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Credentials': true,
+        'Access-Control-Allow-Credentials': false,
       },
       message: 'All Product successfully retrieved.',
     }
@@ -47,7 +47,7 @@ app.get('/product/:id', (req, res) => {
       data: Product,
       headers: {
         'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Credentials': true,
+        'Access-Control-Allow-Credentials': false,
       },
       message: `Search for retrieved product successfully.`,
     }
@@ -71,7 +71,7 @@ app.get('/category/:id', (req, res) => {
         data: Category,
         headers: {
           'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Credentials': true,
+          'Access-Control-Allow-Credentials': false,
         },
         message: `Search for retrieved category successfully.`,
       }
@@ -94,7 +94,7 @@ app.get('/category/', (req, res) => {
         data: Category,
         headers: {
           'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Credentials': true,
+          'Access-Control-Allow-Credentials': false,
         },
         message: `All Category successfully retrieved.`,
       }

@@ -14,31 +14,55 @@ functions:
       - http:
           path: product
           method: get
-          cors: true
+          cors:
+            origin: '*' # <-- Specify allowed origin
+            headers: # <-- Specify allowed headers
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+            allowCredentials: false
       - http:
           path: product/{id}
           method: get
-          cors: true
+          cors:
+            origin: '*' # <-- Specify allowed origin
+            headers: # <-- Specify allowed headers
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+            allowCredentials: false
       - http:
           path: category/{id}
           method: get
-          cors: true
+          cors: 
+            origin: '*' # <-- Specify allowed origin
+            headers: # <-- Specify allowed headers
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+            allowCredentials: false
       - http:
           path: category
           method: get
-          cors: true
-
-resources:
-   Resources:
-     GatewayResponseDefault4XX:
-       Type: 'AWS::ApiGateway::GatewayResponse'
-       Properties:
-         ResponseParameters:
-           gatewayresponse.header.Access-Control-Allow-Origin: "'*'"
-           gatewayresponse.header.Access-Control-Allow-Headers: "'*'"
-         ResponseType: DEFAULT_4XX
-         RestApiId:
-           Ref: 'ApiGatewayRestApi'
+          cors:
+            origin: '*' # <-- Specify allowed origin
+            headers: # <-- Specify allowed headers
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+            allowCredentials: false
 
 plugins:
   - serverless-offline
