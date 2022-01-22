@@ -18,7 +18,6 @@ functions:
             origin: '*' # <-- Specify allowed origin
             headers: # <-- Specify allowed headers
               - Content-Type
-            allowCredentials: false
       - http:
           path: product/{id}
           method: get
@@ -26,7 +25,6 @@ functions:
             origin: '*' # <-- Specify allowed origin
             headers: # <-- Specify allowed headers
               - Content-Type
-            allowCredentials: false
       - http:
           path: category/{id}
           method: get
@@ -34,7 +32,6 @@ functions:
             origin: '*' # <-- Specify allowed origin
             headers: # <-- Specify allowed headers
               - Content-Type
-            allowCredentials: false
       - http:
           path: category
           method: get
@@ -42,7 +39,6 @@ functions:
             origin: '*' # <-- Specify allowed origin
             headers: # <-- Specify allowed headers
               - Content-Type
-            allowCredentials: false
 
 plugins:
   - serverless-offline
