@@ -24,7 +24,8 @@ app.get('/product/', (req, res) => {
       headers: {
         "Access-Control-Allow-Headers" : "Content-Type",
         "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "OPTIONS,POST,GET"
+        "Access-Control-Allow-Methods": "OPTIONS,POST,GET",
+        "Access-Control-Allow-Credentials" : true,
       },
       message: 'All Product successfully retrieved.',
     }
@@ -49,7 +50,8 @@ app.get('/product/:id', (req, res) => {
       headers: {
         "Access-Control-Allow-Headers" : "Content-Type",
         "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "OPTIONS,POST,GET"
+        "Access-Control-Allow-Methods": "OPTIONS,POST,GET",
+        "Access-Control-Allow-Credentials" : true,
       },
       message: `Search for retrieved product successfully.`,
     }
@@ -74,7 +76,8 @@ app.get('/category/:id', (req, res) => {
         headers: {
           "Access-Control-Allow-Headers" : "Content-Type",
           "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Methods": "OPTIONS,POST,GET"
+          "Access-Control-Allow-Methods": "OPTIONS,POST,GET",
+          "Access-Control-Allow-Credentials" : true,
         },
         message: `Search for retrieved category successfully.`,
       }
@@ -98,7 +101,8 @@ app.get('/category/', (req, res) => {
         headers: {
           "Access-Control-Allow-Headers" : "Content-Type",
           "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Methods": "OPTIONS,POST,GET"
+          "Access-Control-Allow-Methods": "OPTIONS,POST,GET",
+          "Access-Control-Allow-Credentials" : true,
         },
         message: `All Category successfully retrieved.`,
       }
