@@ -22,8 +22,9 @@ app.get('/product/', (req, res) => {
       statusCode: 200,
       data: Product,
       headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Credentials': false,
+        "Access-Control-Allow-Headers" : "Content-Type",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "OPTIONS,POST,GET"
       },
       message: 'All Product successfully retrieved.',
     }
@@ -46,8 +47,9 @@ app.get('/product/:id', (req, res) => {
       statusCode: 200,
       data: Product,
       headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Credentials': false,
+        "Access-Control-Allow-Headers" : "Content-Type",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "OPTIONS,POST,GET"
       },
       message: `Search for retrieved product successfully.`,
     }
@@ -70,8 +72,9 @@ app.get('/category/:id', (req, res) => {
         statusCode: 200,
         data: Category,
         headers: {
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Credentials': false,
+          "Access-Control-Allow-Headers" : "Content-Type",
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "OPTIONS,POST,GET"
         },
         message: `Search for retrieved category successfully.`,
       }
@@ -93,8 +96,9 @@ app.get('/category/', (req, res) => {
         statusCode: 200,
         data: Category,
         headers: {
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Credentials': false,
+          "Access-Control-Allow-Headers" : "Content-Type",
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "OPTIONS,POST,GET"
         },
         message: `All Category successfully retrieved.`,
       }
