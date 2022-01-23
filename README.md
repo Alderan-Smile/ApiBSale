@@ -13,7 +13,7 @@ Tenemos 3 tipos distintos de datos y existen 4 formas de obtenerlos.
 https://lwg7yig1ta.execute-api.us-east-1.amazonaws.com
 ```
 
-## 1- Productos y datos cruzados.
+## Productos y datos cruzados.
 
 Para obtener los datos cruzados entre la tabla product y category de manera ordenada se utilizan los siguientes parámetros adicionales al link anterior.
 
