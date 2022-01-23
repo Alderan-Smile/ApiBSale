@@ -32,7 +32,7 @@ Para obtener solo las categorías disponibles se deben usar el siguiente paráme
 ```
 https://... .../dev/category
 ```
-
+Versiones de la Api [Github Commits](https://github.com/Alderan-Smile/ApiBSale/commits/main)
 Api Rest Hosteada por [AWS Api Gateway](https://lwg7yig1ta.execute-api.us-east-1.amazonaws.com/dev/product/)<br/><br/>
 Repositorio de api rest [GitHub Repository](https://github.com/Alderan-Smile/BSaleDesafio)<br/>
 Web JS Hosteada por [AWS Amplify](https://main.d3fpblgrtdfmry.amplifyapp.com/)
