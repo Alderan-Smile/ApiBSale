@@ -8,6 +8,12 @@ const app = express()
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*")
+  res.header("Access-Control-Allow-Headers", "*")
+  next()
+});
+
 // Handle Product GET route for all Products
 app.get('/product/', (req, res) => {
   const query = 'SELECT p.id, p.name, p.url_image, p.price, c.name AS category FROM product p JOIN category c ON (c.id = p.category) ORDER BY p.category'
@@ -21,12 +27,6 @@ app.get('/product/', (req, res) => {
     const response = {
       statusCode: 200,
       data: Product,
-      headers: {
-        "Access-Control-Allow-Headers" : "Content-Type",
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "OPTIONS,POST,GET",
-        "Access-Control-Allow-Credentials" : true,
-      },
       message: 'All Product successfully retrieved.',
     }
     res.send(response)
@@ -47,12 +47,6 @@ app.get('/product/:id', (req, res) => {
     const response = {
       statusCode: 200,
       data: Product,
-      headers: {
-        "Access-Control-Allow-Headers" : "Content-Type",
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "OPTIONS,POST,GET",
-        "Access-Control-Allow-Credentials" : true,
-      },
       message: `Search for retrieved product successfully.`,
     }
     res.status(200).send(response)
@@ -73,12 +67,6 @@ app.get('/category/:id', (req, res) => {
       const response = {
         statusCode: 200,
         data: Category,
-        headers: {
-          "Access-Control-Allow-Headers" : "Content-Type",
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Methods": "OPTIONS,POST,GET",
-          "Access-Control-Allow-Credentials" : true,
-        },
         message: `Search for retrieved category successfully.`,
       }
       res.status(200).send(response)
@@ -98,12 +86,6 @@ app.get('/category/', (req, res) => {
       const response = {
         statusCode: 200,
         data: Category,
-        headers: {
-          "Access-Control-Allow-Headers" : "Content-Type",
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Methods": "OPTIONS,POST,GET",
-          "Access-Control-Allow-Credentials" : true,
-        },
         message: `All Category successfully retrieved.`,
       }
       res.status(200).send(response)
